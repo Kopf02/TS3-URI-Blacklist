@@ -1,0 +1,43 @@
+{
+  "name": "ts3-uri-blacklist",
+  "version": "1.0.0",
+  "description": "TS3 URI Blacklist",
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "test": "nyc --reporter cobertura --reporter=html --reporter=text mocha -r ts-node/register test/*.ts",
+    "mantest": "ts-node-dev --respawn --no-deps --rs --cls test/lib/connect.ts",
+    "lint": "eslint . --ext .ts",
+    "build": "tsc"
+  },
+  "keywords": [
+    "ts3",
+    "typescript",
+    "blacklist"
+  ],
+  "author": "Jens Hummel",
+  "contributors": ["Nico Wagner"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kopf02/TS3-URI-Blacklist"
+  },
+  "homepage": "https://github.com/Kopf02/TS3-URI-Blacklist/blob/main/Readme.md",
+  "devDependencies": {
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.6.3",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "typeorm": "^0.3.7"
+  }
+}
